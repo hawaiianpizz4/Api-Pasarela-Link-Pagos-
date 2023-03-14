@@ -1,0 +1,8 @@
+<?
+function consultsql($cedula){
+    $sql="Select CONCAT('+593',ID_COD_AREA_CELULAR_CLIENTE,CMP_NUMERO_CELULAR_CLIENTE) as numero_celular,CMP_NUMERO_TELEFONO_DOMICILIO ,
+            CMP_CORREO_ELECTRONICO,CMP_DOCUMENTO, CONCAT(CMP_NOMBRES, ' ',CMP_APELLIDO_PATERNO, ' ',CMP_APELLIDO_MATERNO) as nombre 
+            from IGS_DATOS_PERSONALES_CLIENTE  WHERE CMP_DOCUMENTO ='$cedula'";
+    return $sql;
+}
+?>
